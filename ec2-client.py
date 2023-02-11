@@ -1,7 +1,7 @@
 import boto3
 from pprint import pprint
 
-aws_mag_console = boto3.session.Session(profile_name="lifion_nonprod_opslab")
+aws_mag_console = boto3.session.Session(profile_name=None)
 ec2_client = aws_mag_console.client(service_name="ec2", region_name="us-east-1")
 
 response = ec2_client.describe_instances()['Reservations']
